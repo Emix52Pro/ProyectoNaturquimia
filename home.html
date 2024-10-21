@@ -18,43 +18,45 @@
 <body class="flex flex-col min-h-screen bg-gray-100">
   <!-- Navbar -->
   <nav class="bg-gray-900 text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto flex items-center">
       <!-- Logo -->
-      <a href="#" class="text-2xl font-bold flex items-center space-x-1">
+      <a href="#" class="text-2xl font-bold flex items-center space-x-1 lg:text-2xl text-xl">
         <span class="text-red-700 text-shadow">𝕹𝖆𝖙𝖚𝖗𝖖𝖚𝖎𝖒𝖎𝖆</span>
         <span class="text-green-500 text-shadow">𝕰𝖘𝖘𝖊𝖓𝖙𝖎𝖆𝖑𝖘</span>
       </a>
-
-      <!-- Desktop Menu -->
-      <div class="hidden lg:flex space-x-6">
+  
+      <!-- Desktop Menu (centered) -->
+      <div class="hidden lg:flex space-x-6 flex-grow justify-center">
         <a href="#" class="hover:text-gray-400 transition-all">Inicio</a>
         <a href="#" class="hover:text-gray-400 transition-all">Productos</a>
         <a href="#" class="hover:text-gray-400 transition-all">Sobre Nosotros</a>
         <a href="#" class="hover:text-gray-400 transition-all">Contáctanos</a>
       </div>
-
-      <!-- Icons Section -->
-      <div class="hidden lg:flex space-x-4">
+  
+      <!-- Icons Section (right aligned) -->
+      <div class="flex space-x-4 items-center ml-auto">
+        <!-- Cart Icon -->
         <a href="#" class="hover:text-gray-400 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
         </a>
+        <!-- Profile Icon -->
         <a href="#" class="hover:text-gray-400 transition-all">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </a>
+  
+        <!-- Mobile Menu Button -->
+        <button id="burger" class="lg:hidden block text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
       </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="burger" class="lg:hidden block text-white focus:outline-none">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
     </div>
-
+  
     <!-- Mobile Menu (Hidden by default) -->
     <div id="mobile-menu" class="hidden lg:hidden mt-4">
       <a href="#" class="block text-white py-2 hover:text-gray-400 transition-all">Inicio</a>
@@ -63,6 +65,8 @@
       <a href="#" class="block text-white py-2 hover:text-gray-400 transition-all">Contáctanos</a>
     </div>
   </nav>
+  
+  
 
   <!-- Main content -->
   <main class="flex-grow container mx-auto p-4">
